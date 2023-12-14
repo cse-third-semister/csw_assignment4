@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            .form-label{
+                background-color: aqua;
+                display: block;
+                padding: 8px;
+                font-size: 20px;
+            }
+            .form-control{
+                background-color: red;
+               
+                border: 3px solid black;
+            }
+            .progress-barr{
+                width: 0%;
+                
+            }
+            .progress-barr1{
+                width: 100%;
+                
+            }
+        </style>
+</head>
+
+<body>
+
+    <div class="mb-3">
+        <label for="formFileMultiple" class="form-label">Choose files</label>
+        <input class="form-control" type="file" id="formFileMultiple" multiple>
+    </div>
+
+    <div class="progress progress-barr" role="progressbar" aria-label="Animated Success striped example  " aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped progress-bar-animated " ></div>
+      </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+    <!-- <script>
+        $(document).ready(function(){
+            $("#formFileMultiple").click(function(){
+                $(".progress").css({
+                    width:"100%"
+                },2000);
+                $(".progress-bar").addClass("progress-barr1");
+
+
+
+            })
+
+        })
+    </script> -->
+    <script>
+        let a = 107;
+       
+
+         $("#formFileMultiple").click(function(){
+            setTimeout(fun,5000);
+
+            function fun (){
+                let id = setInterval( ()=>{
+                $(".progress").css({
+                    width:a+=110
+                   
+                    
+                });
+                setTimeout( ()=>{
+                    clearInterval(id);
+               
+                   
+                    
+                },12000);
+                
+                
+
+               },1000);
+               $(".progress-bar").addClass("progress-barr1");
+
+            }
+           
+              
+            })
+
+
+    </script>
+
+</html>
